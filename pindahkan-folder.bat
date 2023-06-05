@@ -1,12 +1,23 @@
 @echo off
 
-set "source=%USERPROFILE%\Desktop\qibiivpn\Extensions"
-set "destination=C:\"
+set "desktopFolder=%USERPROFILE%\Desktop"
 
+echo Memulai pemindahan folder...
+
+rem Folder pertama
+set "source1=%desktopFolder%\qibiiyt\DOCQIBIINEW"
+set "destination1=%desktopFolder%"
+echo Memindahkan folder qibiiyt DOCQIBIINEW...
+move "%source1%" "%destination1%"
+
+rem Folder kedua (Extensions)
+set "source2=%desktopFolder%\qibiiyt\Extensions"
+set "destination2=C:\"
 echo Memindahkan folder Extensions...
-move "%source%" "%destination%"
+move "%source2%" "%destination2%"
 
-echo Pindah folder berhasil!
+echo Pemindahan folder selesai!
+pause
 
 echo Menghapus file batch...
 ping 127.0.0.1 -n 2 > nul
